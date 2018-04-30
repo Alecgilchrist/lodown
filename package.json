@@ -1,0 +1,29 @@
+{
+  "name": "lodown-alecgilchrist",
+  "version": "1.0.0",
+  "description": "An npm functional programming library project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alecgilchrist/lodown.git"
+  },
+  "author": "Alec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alecgilchrist/lodown/issues"
+  },
+  "homepage": "https://github.com/Alecgilchrist/lodown#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "i": "^0.3.6",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.1.1",
+    "sinon": "^4.5.0"
+  }
+}
