@@ -194,6 +194,7 @@ function map(collection, action){
     })
     return result
 }
+
 module.exports.map = map
 /**
  * pluck: returns all the values of a given property in an array of objects in an array
@@ -221,10 +222,11 @@ function contains(arr, value) {
   };
 module.exports.contains = contains 
 /**
- * reduce: 
- * 
- * 
- * 
+ * reduce: returns the result of a seeded accumulator, and a function, passed over each element in an array, to reduce it to a single value
+ * @param {Array} arr: an array
+ * @param {Function} func: a function to be passed to all values
+ * @param {Anything} seed: the start of the accumulation, if not provided, the first element in array
+ * @return the accumulator, after being applied through the function to all elements
  */
 function reduce(arr, func, seed) {
     each(arr, function(element, i, collection){
@@ -238,10 +240,10 @@ function reduce(arr, func, seed) {
 };
 module.exports.reduce = reduce
 /**
- * 
- * 
- * 
- * 
+ * every: tests every value in a collection. if they all pass, returns true
+ * @param {Array} collection: an array of values
+ * @param {Function} func: a function to test value against
+ * @return {Boolean} True if all values passed to func return true, false if any fail
  */
 function every(collection, func) {
    if (func) {
@@ -258,10 +260,10 @@ function every(collection, func) {
 };
 module.exports.every = every
 /**
- * 
- * 
- * 
- * 
+ * some: tests every value in a collection. if any pass, returns true
+ * @param {Array} collection: an array of values
+ * @param {Function} func: a function to test value against
+ * @return {Boolean} True if any values passed to func return true
  */
 function some(collection, funct) {
    if (funct) {
@@ -278,8 +280,9 @@ function some(collection, funct) {
 module.exports.some = some
 /**
  * extend: adds key value pairs from objects, into the first given object
- * 
- * 
+ * @param {Object} object1: the object to add key value pairs to
+ * @param {object} : any number of objects to add key value pairs from
+ * @return returns the object provided as the first argument, plus all key value pairs from any other objects provided 
  * 
  */
 function extend(object1) {
